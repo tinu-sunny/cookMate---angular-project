@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg custom-navbar px-4">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="#">
+      <img
+        src="https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-cooking-logo-vector-png-image_6701896.png"
+        alt="logo"
+        width="40"
+        class="me-2"
+      />
+      CookWithMe
+    </a>
+
+    <!-- Toggle (Mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/recipes">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- User Icon -->
+    <div class="dropdown">
+      <button
+        class="btn btn-outline-light dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
+        <i class="bi bi-person"></i>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
