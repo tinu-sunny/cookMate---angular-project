@@ -3,6 +3,7 @@ import { LandingPage } from './pages/landing-page/landing-page';
 import { About } from './pages/about/about';
 import { Recipe } from './pages/recipe/recipe';
 import { ViewReciipe } from './pages/view-reciipe/view-reciipe';
+import { Contact } from './pages/contact/contact';
 
 export const routes: Routes = [
     {
@@ -16,5 +17,11 @@ export const routes: Routes = [
     },
     {
         path:'view-recipe',component:ViewReciipe
+    },
+    {
+        path:'about',component:About
+    },
+    {
+        path:'contact',component:Contact
     }
 ]
