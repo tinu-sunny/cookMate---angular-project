@@ -1,10 +1,89 @@
-<div class="row">
-    <!--  admin Header -->
-    <div class="col">
-        <app-admin-sidebar></app-admin-sidebar>
+<div class="container-fluid">
+  <div class="row min-vh-100">
+
+    <!-- SIDEBAR -->
+    <div class="col-md-3 p-0">
+      <app-admin-sidebar></app-admin-sidebar>
     </div>
-    <!-- content -->
-    <div class="col">
-         <p>dashboard content</p>
+
+    <!-- CONTENT -->
+    <div class="col-md-9 p-4">
+
+      <!-- HEADER -->
+      <section
+        class="d-flex justify-content-center align-items-center rounded mb-4"
+        style="background:#FFC107; height:120px;"
+      >
+        <h4 class="fw-bold" style="font-size:40px;">Admin Panel</h4>
+      </section>
+
+      <!-- COUNT CARDS -->
+      <div class="row g-4 mb-4">
+
+        <!-- USERS -->
+        <div class="col-md-3">
+          <div class="p-4 rounded text-white d-flex justify-content-between align-items-center"
+               style="background:#0010ecb1;">
+            <div>
+              <p class="fw-bold mb-1">Users</p>
+              <p class="fw-bold fs-5">120</p>
+            </div>
+            <i class="bi bi-people-fill fs-1"></i>
+          </div>
+        </div>
+
+        <!-- RECIPES -->
+        <div class="col-md-3">
+          <div class="p-4 rounded text-dark d-flex justify-content-between align-items-center"
+               style="background:#07ff28;">
+            <div>
+              <p class="fw-bold mb-1">Recipes</p>
+              <p class="fw-bold fs-5">50</p>
+            </div>
+            <i class="bi bi-pencil fs-1"></i>
+          </div>
+        </div>
+
+        <!-- DOWNLOADS -->
+        <div class="col-md-3">
+          <div class="p-4 rounded text-white d-flex justify-content-between align-items-center"
+               style="background:#ff0707;">
+            <div>
+              <p class="fw-bold mb-1">Downloads</p>
+              <p class="fw-bold fs-5">520</p>
+            </div>
+            <i class="bi bi-download fs-1"></i>
+          </div>
+        </div>
+
+        <!-- NOTIFICATIONS -->
+        <div class="col-md-3">
+          <div class="p-4 rounded text-white d-flex justify-content-between align-items-center"
+               style="background:#7e7d7dde;">
+            <div>
+              <p class="fw-bold mb-1">Notifications</p>
+              <p class="fw-bold fs-5">5</p>
+            </div>
+            <i class="bi bi-bell-fill fs-1"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ANALYTICS -->
+      <section class="bg-light rounded shadow p-4">
+        <h4 class="fw-bold mb-4">Analytics</h4>
+
+        <div class="row">
+          <div class="col-md-6">
+            <app-calender></app-calender>
+          </div>
+          <div class="col-md-6">
+            <app-graph></app-graph>
+          </div>
+        </div>
+      </section>
+
     </div>
+  </div>
 </div>
