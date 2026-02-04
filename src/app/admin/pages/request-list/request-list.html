@@ -1,1 +1,40 @@
-<p>request-list works!</p>
+<div class="row">
+    <div class="col-3">
+        <app-admin-sidebar></app-admin-sidebar>
+    </div>
+    <div class="col-9">
+        <h1 class="text-center mt-5">All Testimony List</h1>
+
+        <div class="mt-5 ">
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>name</td>
+                        <td>email@gmail.com</td>
+                        <td>Message</td>
+                        <td class="d-flex gap-3">
+  <button class="btn btn-outline-success btn-md" title="Approve">
+    <i class="bi bi-check-circle"></i>
+  </button>
+
+  <button class="btn btn-outline-danger btn-md" title="Reject">
+    <i class="bi bi-x-circle "></i>
+  </button>
+</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
