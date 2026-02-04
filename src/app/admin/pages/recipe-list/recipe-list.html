@@ -1,1 +1,50 @@
-<p>recipe-list works!</p>
+<div class="row" style="width: 100%;">
+    <div class="col-3">
+        <app-admin-sidebar></app-admin-sidebar>
+    </div>
+    <div class="col-7" >
+
+        <!-- button and search bar -->
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 gap-3 w-100">
+  <button class="btn btn-success align-self-md-start">
+    Add Recipe
+  </button>
+
+  <input
+    type="text"
+    class="form-control w-50"
+    placeholder="Search recipes..."
+  >
+</div>
+
+<!-- table -->
+
+<div class="mt-5">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Image</th>
+          <th scope="col">Cuisine</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+     <br>
+      <tbody >
+        <tr >
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td class="d-flex  gap-3"><button class="btn "><i class="bi bi-pencil-square fs-4 text-info"></i></button><button class="btn "><i class="bi bi-trash fs-4 text-danger"></i>   </button></td>
+        </tr>
+       
+       
+      </tbody>
+    </table>
+</div>
+
+    </div>
+</div>
