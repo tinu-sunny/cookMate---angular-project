@@ -1,1 +1,92 @@
-<p>manage-recipe works!</p>
+<div class="row">
+    <!-- admin-side bar -->
+    <div class="col-3">
+        <app-admin-sidebar></app-admin-sidebar>
+    </div>
+    <div class="col-9">
+        <h1 class="text-center mt-5 ">Add recipe add </h1>
+
+    <!-- form section -->
+     <section class="container my-5">
+  <div class="card shadow p-4">
+    <h3 class="text-center fw-bold mb-4">Add Recipe Details</h3>
+
+    <form>
+      <!-- ROW 1 -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Recipe Name">
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Cooking Time">
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Preparation Time">
+        </div>
+        <div class="col-md-6">
+          <input type="number" class="form-control" placeholder="Recipe Servings">
+        </div>
+      </div>
+
+      <!-- ROW 3 -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Choose Cuisine Type">
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Mode of Cooking">
+        </div>
+      </div>
+
+      <!-- ROW 4 -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Recipe Image URL">
+        </div>
+        <div class="col-md-6">
+          <input type="number" class="form-control" placeholder="Calories">
+        </div>
+      </div>
+
+      <!-- INGREDIENTS & STEPS -->
+      <div class="row mb-3">
+        <div class="col-md-6 d-flex gap-2">
+          <textarea class="form-control" rows="3" placeholder="Ingredients"></textarea>
+          <button type="button" class="btn btn-success">+</button>
+        </div>
+
+        <div class="col-md-6 d-flex gap-2">
+          <textarea class="form-control" rows="3" placeholder="Preparation Steps"></textarea>
+          <button type="button" class="btn btn-success">+</button>
+        </div>
+      </div>
+
+      <!-- MEAL TYPE -->
+      <div class="border rounded p-3 mb-4">
+        <p class="fw-semibold mb-2">Choose Meal Type :</p>
+        <div class="d-flex flex-wrap gap-3">
+          <div><input type="checkbox"> Dinner</div>
+          <div><input type="checkbox"> Lunch</div>
+          <div><input type="checkbox"> Snack</div>
+          <div><input type="checkbox"> Dessert</div>
+          <div><input type="checkbox"> Side Dish</div>
+          <div><input type="checkbox"> Appetizer</div>
+          <div><input type="checkbox"> Breakfast</div>
+          <div><input type="checkbox"> Beverage</div>
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <div class="text-center">
+        <button class="btn btn-success px-5">Add Recipe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+    </div>
+</div>

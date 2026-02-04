@@ -16,7 +16,7 @@ const routes: Routes = [
     path:'download-list',component:DownloadList
   },
   {
-    path:'manage-recipe',component:ManageRecipe
+    path:'manage-recipe/add',component:ManageRecipe
   },
   {
     path:'user-list',component:UserList
