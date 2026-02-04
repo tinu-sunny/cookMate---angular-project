@@ -5,6 +5,7 @@ import { Recipe } from './pages/recipe/recipe';
 import { ViewReciipe } from './pages/view-reciipe/view-reciipe';
 import { Contact } from './pages/contact/contact';
 import { SavedRecipe } from './pages/saved-recipe/saved-recipe';
+import { Auth } from './components/auth/auth';
 
 export const routes: Routes = [
     {
@@ -27,5 +28,8 @@ export const routes: Routes = [
     },
     {
         path:'your-collections',component:SavedRecipe
+    },
+    {
+        path:'login',component:Auth
     }
 ]
