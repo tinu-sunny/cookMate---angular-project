@@ -5,7 +5,7 @@
     <!-- Left Image -->
     <div class="col-lg-6">
       <img
-        src="https://cookingitalians.com/wp-content/uploads/2024/11/Margherita-Pizza.jpg"
+        [src]="recipedata.image"
         alt="Classic Margherita Pizza"
         class="img-fluid rounded"
         style="width:100%; height: 600px; object-fit:cover;"
@@ -18,35 +18,39 @@
 
     <!-- Right Content -->
     <div class="col-lg-6">
-      <h2 class="fw-bold">Classic Margherita Pizza</h2>
+      <h2 class="fw-bold">{{recipedata.name}}</h2>
 
       <!-- Info Badges -->
       <div class="d-flex flex-wrap gap-3 my-3">
-        <span class="badge bg-light text-dark p-3">🍝 Italian</span>
-        <span class="badge bg-light text-dark p-3">🍔 Servings: 4</span>
-        <span class="badge bg-light text-dark p-3">🔥 Calories</span>
+        <span class="badge bg-light text-dark p-3">🍝 {{recipedata.cuisine}}</span>
+        <span class="badge bg-light text-dark p-3">🍔 Servings: {{recipedata.servings}}</span>
+        <span class="badge bg-light text-dark p-3">🔥 Calories {{recipedata.caloriesPerServing
+}}/protion</span>
+@for (item of recipedata.mealType; track $index) {
+        <span class="badge bg-light text-dark p-3">🍴Meal Type: {{item}}</span>
+
+}
       </div>
 
       <!-- Ingredients -->
       <h5 class="mt-4">🧂 Ingredients</h5>
       <ul class="list-group mb-4">
-        <li class="list-group-item">Pizza dough</li>
-        <li class="list-group-item">Tomato sauce</li>
-        <li class="list-group-item">Fresh mozzarella cheese</li>
-        <li class="list-group-item">Fresh basil leaves</li>
-        <li class="list-group-item">Olive oil</li>
-        <li class="list-group-item">Salt & pepper</li>
+        @for (item of Ingredients; track $index) {
+        <li class="list-group-item">{{item}}</li>
+
+        }
+     
       </ul>
 
       <!-- Instructions -->
       <h5>👨‍🍳 Cooking Instructions</h5>
+      
       <ol class="list-group list-group-numbered">
-        <li class="list-group-item">Preheat oven to 475°F (245°C).</li>
-        <li class="list-group-item">Roll out dough and spread tomato sauce.</li>
-        <li class="list-group-item">Add mozzarella and basil.</li>
-        <li class="list-group-item">Drizzle olive oil, season to taste.</li>
-        <li class="list-group-item">Bake for 12–15 minutes.</li>
-        <li class="list-group-item">Slice and serve hot.</li>
+        @for (item of Instructions; track $index) {
+        <li class="list-group-item">{{item}}</li>
+
+        }
+       
       </ol>
     </div>
   </div>

@@ -41,7 +41,7 @@
     </div>
 
     <!-- User Icon -->
-    <div class="dropdown">
+@if(token){    <div class="dropdown">
       <button
         class="btn btn-outline-light dropdown-toggle"
         data-bs-toggle="dropdown"
@@ -51,10 +51,29 @@
       </button>
 
       <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Welcome {{userDetailes.username}}</a></li>
         <li><a class="dropdown-item" href="#">Profile</a></li>
         <li><a class="dropdown-item" href="#">Logout</a></li>
       </ul>
+    </div>}
+    @else {
+      <div class="dropdown">
+      <button
+        class="btn btn-outline-light dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
+      
+         <i class="bi bi-person-circle"></i>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end">
+      
+        <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+        <li><a class="dropdown-item" routerLink="/register">Register</a></li>
+      </ul>
     </div>
+      <!-- <button class="btn btn-outline-dark fw-bold " routerLink="/login">Login</button> -->
+    }
 
   </div>
 </nav>

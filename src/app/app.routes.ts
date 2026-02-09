@@ -6,6 +6,7 @@ import { ViewReciipe } from './pages/view-reciipe/view-reciipe';
 import { Contact } from './pages/contact/contact';
 import { SavedRecipe } from './pages/saved-recipe/saved-recipe';
 import { Auth } from './components/auth/auth';
+import { Login } from './components/login/login';
 
 export const routes: Routes = [
     {
@@ -18,7 +19,7 @@ export const routes: Routes = [
         path:'all-recipe',component:Recipe
     },
     {
-        path:'view-recipe',component:ViewReciipe
+        path:'view-recipe/:id',component:ViewReciipe
     },
     {
         path:'about',component:About
@@ -30,7 +31,10 @@ export const routes: Routes = [
         path:'your-collections',component:SavedRecipe
     },
     {
-        path:'login',component:Auth
+        path:'register',component:Auth
+    },
+    {
+        path:'login', component:Login
     },
 
     // admin module integation to the route 
