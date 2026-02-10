@@ -1,10 +1,25 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Apiservices {
+
+
+
+  getHeader() {
+    
+   const token = sessionStorage.getItem('token')
+  console.log(token);
+  
+    return {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${token}`
+      })
+    }
+   
+  }
 
   baseurl:string=' http://localhost:3000'
 
@@ -12,7 +27,7 @@ export class Apiservices {
 
 
   viewAlluser(){
-    return this.http.get(`${this.baseurl}/view-all-recipes`)
+    return this.http.get(`${this.baseurl}/view-all-recipes`,this.getHeader())
   }
 
   regusers(reqbody:any){
@@ -25,7 +40,7 @@ export class Apiservices {
 
 
   viewRecipe(itemid:any){
-    return this.http.get(`${this.baseurl}/view-recipe/${itemid}`)
+    return this.http.get(`${this.baseurl}/view-recipe/${itemid}`,this.getHeader())
   }
   
 }
