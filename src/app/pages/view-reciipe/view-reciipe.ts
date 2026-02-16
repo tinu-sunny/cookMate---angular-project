@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AppFooter } from "../../components/app-footer/app-footer";
 import { AppHeader } from "../../components/app-header/app-header";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Apiservices } from '../../services/apiservices';
 
 
 @Component({
   selector: 'app-view-reciipe',
-  imports: [AppFooter, AppHeader],
+  imports: [AppFooter, AppHeader,RouterLink],
   templateUrl: './view-reciipe.html',
   styleUrl: './view-reciipe.css',
 })
@@ -20,6 +20,8 @@ itemid:any=''
 recipedata:any=''
 Ingredients:any=''
 Instructions:any=''
+relatedRecipe:any=''
+
   ngOnInit(): void {
     this.itemid=this.urlid.snapshot.paramMap.get('id');
     console.log(this.itemid);
@@ -41,8 +43,8 @@ this.api.viewRecipe(this.itemid).subscribe({
     console.log(this.Ingredients);
     console.log(this.Instructions);
     
-    
-    
+    this.relatedRecipes()
+  
     
   },
   error:(err)=>{
@@ -53,8 +55,59 @@ this.api.viewRecipe(this.itemid).subscribe({
 
 
 
+
+
+
 }
 
+
+relatedRecipes (){
+
+  
+    this.api.viewRelatedRecipes(this.recipedata.
+cuisine
+).subscribe({
+  next:(res:any)=>{
+
+    console.log(res);
+    this.relatedRecipe=res.relatedRecipes.filter((recipe:any) => recipe._id !== this.recipedata._id)
+
+    console.log(this.relatedRecipe);
+    
+
+    
+
+  },
+
+  error:(err)=>{
+     console.log(err);
+     
+  }
+})
+}
+
+
+saveRecip(){
+
+  console.log(this.itemid);
+  console.log(this.recipedata);
+
+
+  this.api.saveRecipes(this.itemid,this.recipedata).subscribe({
+    next:(res:any)=>{
+      console.log(res);
+      alert(res)
+      
+    },
+    error:(error)=>{
+      console.log(error);
+      
+    }
+  })
+  
+  
+
+}
 
 
 

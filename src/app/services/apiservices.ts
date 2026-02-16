@@ -13,11 +13,13 @@ export class Apiservices {
    const token = sessionStorage.getItem('token')
   console.log(token);
   
-    return {
+
+     return {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${token}`
       })
-    }
+  
+  }
    
   }
 
@@ -42,5 +44,21 @@ export class Apiservices {
   viewRecipe(itemid:any){
     return this.http.get(`${this.baseurl}/view-recipe/${itemid}`,this.getHeader())
   }
+
+viewRelatedRecipes (related:any){
+  return this.http.get(`${this.baseurl}/related-recipes?cuisine=${related}` ,this.getHeader())
+}
+
+
+saveRecipes(itemid:any,itemData:any){
+  return this.http.post(`${this.baseurl}/save-recipes/${itemid}`,  itemData, this.getHeader())
+}
+
+
+
+
+
+
+
   
 }
