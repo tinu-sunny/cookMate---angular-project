@@ -55,6 +55,11 @@ saveRecipes(itemid:any,itemData:any){
 }
 
 
+viewSavedRecipe(){
+  return this.http.get(`${this.baseurl}/View-Saved-Collection` ,this.getHeader())
+}
+
+
 
 
 
