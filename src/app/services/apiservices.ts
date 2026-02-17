@@ -59,6 +59,14 @@ viewSavedRecipe(){
   return this.http.get(`${this.baseurl}/View-Saved-Collection` ,this.getHeader())
 }
 
+deleteSavedRecipe(itemId:any){
+  return this.http.delete(`${this.baseurl}/delete-saved-recipe/${itemId}`,this.getHeader())
+}
+
+downloadRecipe(itemid:any,data:any){
+  return this.http.post(`${this.baseurl}/download-recipe/${itemid}`,data, this.getHeader())
+}
+
 
 
 

@@ -7,6 +7,7 @@ import { Contact } from './pages/contact/contact';
 import { SavedRecipe } from './pages/saved-recipe/saved-recipe';
 import { Auth } from './components/auth/auth';
 import { Login } from './components/login/login';
+import { Profile } from './pages/profile/profile';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,9 @@ export const routes: Routes = [
     },
     {
         path:'login', component:Login
+    },
+    {
+        path:'profile', component:Profile
     },
 
     // admin module integation to the route 

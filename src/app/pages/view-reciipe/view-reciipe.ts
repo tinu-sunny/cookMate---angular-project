@@ -110,5 +110,21 @@ saveRecip(){
 }
 
 
+downloadRecipe(itemid:any){
+
+
+  this.api.downloadRecipe(itemid,this.recipedata).subscribe({
+    next:(res:any)=>{
+      console.log(res);
+      
+    },
+    error:(err)=>{
+      console.log(err);
+      
+    }
+  })
+
+}
+
 
 }

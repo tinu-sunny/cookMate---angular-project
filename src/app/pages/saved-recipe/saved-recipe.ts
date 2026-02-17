@@ -41,4 +41,28 @@ this.api.viewSavedRecipe().subscribe({
 
 
 
+deleteSavedItem(itemId:any){
+
+  this.api.deleteSavedRecipe(itemId).subscribe({
+ next:(res:any)=>{
+  console.log(res);
+  alert(res.message)
+  window.location.reload()
+  
+ },
+ error:(err)=>{
+  console.log(err);
+  
+ }
+  })
+  console.log(itemId);
+  
+
+
+
+}
+
+
+
+
 }

@@ -1,0 +1,55 @@
+    body {
+      background: #f2f3f7;
+    }
+
+    .main-card {
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      background: #ffffff;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .recipe-img {
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .btn-delete {
+      background: #ff3b3b;
+      color: white;
+      border-radius: 25px;
+      padding: 6px 20px;
+    }
+
+    .btn-delete:hover {
+      background: #d63030;
+    }
+
+    .btn-update {
+      background: #20c997;
+      color: white;
+      border-radius: 25px;
+      padding: 8px 25px;
+    }
+
+    .btn-update:hover {
+      background: #17b68b;
+    }
+
+    .btn-cancel {
+      border-radius: 25px;
+      padding: 8px 25px;
+    }
+
+
+    .recipe-scroll{
+   max-height: 450px;   
+        overflow-y: auto;
+    }

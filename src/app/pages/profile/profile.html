@@ -1,1 +1,94 @@
-<p>profile works!</p>
+<app-app-header></app-app-header>
+
+
+
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Profile Section -->
+    <div class="col-lg-6">
+      <div class="p-4 main-card text-center">
+
+        <h4 class="mb-4 fw-bold">Update Profile</h4>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+             class="profile-img mb-4" alt="profile">
+
+        <div class="mb-3">
+          <input type="text" class="form-control rounded-pill p-3"
+                 placeholder="Enter Name">
+        </div>
+
+        <div class="mb-4">
+          <input type="email" class="form-control rounded-pill p-3"
+                 placeholder="Enter Email">
+        </div>
+
+        <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-update">Update Profile</button>
+          <button class="btn btn-outline-secondary btn-cancel">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Downloaded Recipe Section -->
+    <div class="col-lg-6">
+      <div class="p-4 main-card  recipe-scroll">
+
+        <h4 class="text-center fw-bold mb-4 ">
+          Downloaded Recipe List
+        </h4>
+
+        <div class="row g-4">
+
+          <!-- Recipe Card 1 -->
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
+              <img src="https://source.unsplash.com/400x300/?biryani"
+                   class="recipe-img mb-3 w-100">
+              <h6 class="fw-bold">Chicken Biryani</h6>
+              <button class="btn btn-delete mt-2">Delete</button>
+            </div>
+          </div>
+
+              <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
+              <img src="https://source.unsplash.com/400x300/?biryani"
+                   class="recipe-img mb-3 w-100">
+              <h6 class="fw-bold">Chicken Biryani</h6>
+              <button class="btn btn-delete mt-2">Delete</button>
+            </div>
+          </div>
+
+
+              <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
+              <img src="https://source.unsplash.com/400x300/?biryani"
+                   class="recipe-img mb-3 w-100">
+              <h6 class="fw-bold">Chicken Biryani</h6>
+              <button class="btn btn-delete mt-2">Delete</button>
+            </div>
+          </div>
+
+          <!-- Recipe Card 2 -->
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 p-3 text-center">
+              <img src="https://source.unsplash.com/400x300/?chocolate-cake"
+                   class="recipe-img mb-3 w-100">
+              <h6 class="fw-bold">Chocolate Cake</h6>
+              <button class="btn btn-delete mt-2">Delete</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<app-app-footer></app-app-footer>
