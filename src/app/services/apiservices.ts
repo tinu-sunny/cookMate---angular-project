@@ -67,6 +67,19 @@ downloadRecipe(itemid:any,data:any){
   return this.http.post(`${this.baseurl}/download-recipe/${itemid}`,data, this.getHeader())
 }
 
+adminAddRecipe(data:any){
+  return this.http.post(`${this.baseurl}/manage-recipe/add`,data)
+}
+
+adminDeleteRecipe(id:any){
+  return this.http.delete(`${this.baseurl}/delete-recipe/${id}`)
+}
+
+adminUpdateRecipe(id:any,data:any){
+  return this.http.patch(`${this.baseurl}/delete-recipe/${id}`,data)
+}
+
+
 
 
 

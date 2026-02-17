@@ -116,6 +116,7 @@ downloadRecipe(itemid:any){
   this.api.downloadRecipe(itemid,this.recipedata).subscribe({
     next:(res:any)=>{
       console.log(res);
+      alert("downloading.......")
       
     },
     error:(err)=>{
